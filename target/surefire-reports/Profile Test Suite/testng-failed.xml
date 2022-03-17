@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" configfailurepolicy="continue" verbose="0" name="Failed suite [Profile Test Suite]">
+  <parameter name="runningOnGrid" value="false"/>
+  <parameter name="browserFlagO" value="firefox"/>
+  <parameter name="hubHost" value="localhost"/>
+  <parameter name="hubPort" value="4458"/>
+  <listeners>
+    <listener class-name="util.EmailableSummaryReporter"/>
+  </listeners>
+  <test name="search test - FF(failed)">
+    <parameter name="runningOnGrid" value="false"/>
+    <parameter name="browserFlagO" value="firefox"/>
+    <parameter name="hubHost" value="localhost"/>
+    <parameter name="hubPort" value="4458"/>
+    <groups>
+      <run>
+        <include name="firefox"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="xbox.testcase.profile.XboxProfileCheck">
+        <methods>
+          <include name="setUpBrowser"/>
+          <include name="tearDown"/>
+          <include name="testEditAccountSingle"/>
+        </methods>
+      </class> <!-- xbox.testcase.profile.XboxProfileCheck -->
+    </classes>
+  </test> <!-- search test - FF(failed) -->
+</suite> <!-- Failed suite [Profile Test Suite] -->
