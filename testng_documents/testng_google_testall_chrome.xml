@@ -5,7 +5,7 @@
     <listener class-name="util.EmailableSummaryReporter" />
 </listeners>
 <suite-files>
-	<suite-file path="./testng_documents/suite-google-search_chrome.xml" />
-	<suite-file path="./testng_documents/suite-google-translate_chrome.xml" />
+	<suite-file path="/testng_documents/suite-google-search_chrome.xml" />
+	<suite-file path="/testng_documents/suite-google-translate_chrome.xml" />
 </suite-files>
 </suite>

@@ -60,7 +60,7 @@
 				<version>2.18.1</version>
 				<configuration>
 					<suiteXmlFiles>
-						 <suiteXmlFile>testng_documents/testng_google_testall chrome.xml</suiteXmlFile>
+						 <suiteXmlFile>testng_documents/testng_google_testall_chrome.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>				
 			</plugin>
