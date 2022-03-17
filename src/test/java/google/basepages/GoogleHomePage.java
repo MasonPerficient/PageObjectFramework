@@ -21,12 +21,6 @@ public class GoogleHomePage extends Page {
 	@FindBy(name = "q")//it can be located by name
 	public WebElement searchInput;
 
-	@FindBy(id = "btnK")//it can be located by id
-	public WebElement searchSubmit;
-
-	@FindBy(linkText = "English")
-	public WebElement english;
-
 	@FindBy(xpath = "//a[@href='https://maps.google.com/maps?hl=en']")
 	public WebElement maps;
 
@@ -40,23 +34,8 @@ public class GoogleHomePage extends Page {
 	@FindBy(className = "gb_A gb_Ka gb_f")
 	public WebElement signedInUser;
 	
-	@FindBy(className = "gb_A gb_Ka gb_f")
-	public WebElement signedInUserChrome;//chrome
-	
-	@FindBy(id = "gb_71")
-	public WebElement logoutLink;
-	
-	@FindBy(className = "jAcX2 ZWVAt R37Fhd")
-	public WebElement link_Signout;
-	
 	@FindBy(xpath="//input[contains(@value,'Google') and @type='submit']")
 	public WebElement button_googleSearch;
-
-	@FindBy(id = "gb_23")
-	public WebElement gmailLink;
-
-	@FindBy(id = "gb_25")
-	public WebElement gDriveLink;
 	
 	@FindBy(xpath = "//a[@class='gb_A']")
 	public WebElement moreLink;
@@ -100,60 +79,6 @@ public class GoogleHomePage extends Page {
 		//here it returns a google map page, in a word, return the page which the browser will be directed to
 		return new GoogleMapPage();
 	}
-	
-	//sign out
-	public GoogleHomePage logout() throws InterruptedException {
-		//get the current browser type
-//		String browserFlag = TestCaseBase.browserFlag;
-	
-		//use actions to perform the mouse hover and mouse click
-		//to know how it works,you could try to find the actions in selenium document
-		Actions actions = new Actions(TestCaseBase.threadDriver.get());
-		
-		//it's a soft waiting, soft means it stops waiting once this element is visible on page.
-		Waiting.until(signedInUser);
-		
-		actions.moveToElement(signedInUser).click().perform();
-		
-		Waiting.until(link_Signout);
-//		if (TestCaseBase.browserFlag.equals("ie")) {
-//			link_Signout.sendKeys("\n");
-			link_Signout.click();
-//		}
-//		else{
-//		link_Signout.click();
-//		}
-//		actions.moveToElement(logoutLink).click().perform();
-		
-		//it returns a new object because the page refreshed when logout
-	    //that means, only create new page object when it get refreshed
-		return new GoogleHomePage();
-	}
-	
-	/*
-	 * 
-	 * this method will sign in default user, however, it is moved to reusable function package
-	 * you could find it thi that package
-	 * 
-	 *  Why put it in reusable function?
-	 *  it is because we want the test actions across pages could be saved in a separate place but not in the page
-	 *  
-	public static GoogleHomePage signInDefaultUser() throws Exception {
-		Properties PROPERTIES_RESOURCES = SystemUtil
-				.loadPropertiesResources("/testdata_google.properties");
-		String email = PROPERTIES_RESOURCES.getProperty("login.email");
-		String pwd = PROPERTIES_RESOURCES.getProperty("login.password");
-
-		GoogleHomePage googleHomePage;
-		GoogleSignInPage googleSignInPage;
-		googleHomePage = new GoogleHomePage();
-		googleSignInPage = new GoogleSignInPage();
-
-		googleHomePage.open();
-		googleHomePage.loginLink.click();
-		return  googleSignInPage.signIn(email, pwd);
-		
-	}*/
 
 	//go to google translate
 	public void gotoGoogleTranslate() throws InterruptedException {

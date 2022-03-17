@@ -17,23 +17,9 @@ public class GoogleMapPage extends Page {
 
 	public static String TITLE = "Google Maps";
 	
-	// .//*[@class='widget-pane-section-listbox']//*[@class='widget-pane-section-directions-trip clearfix selected'][1]//h1/span
-	@FindBy(xpath = ".//*[@class='widget-pane-section-listbox']/*[1]//h1/span")
-	public WebElement suggestedRoute;
-	
-	@FindBy(xpath = ".//*[@id='directions-searchbox-0']/button[1]")
-	public WebElement routeButton;
-	
-	@FindBy(xpath = ".//*[@id='sb_ifc51']/input")
-	public WebElement fromDirectionsInput;
-	
-	@FindBy(xpath = ".//*[@id='pane']/div/div[1]/div/div[1]/button[2]")
-	public WebElement directionsButton;
-	
 	@FindBy(xpath = "//*[@id=\'pane\']/div/div[1]/div/div/div[2]/div[1]/div[3]/div/a")
 	public WebElement firstRestaurant;
 
-	//@FindBy(xpath = "//span[@class='pp-place-title']")
 	@FindBy(xpath = "(//div[@class='suggest-left-content']/span)[1]/span")
 	public WebElement searchResultTitle;
 	
@@ -42,11 +28,6 @@ public class GoogleMapPage extends Page {
 	
 	@FindBy(name = "q")
 	public WebElement searchInput;
-	
-	//Sign in button on the right top corner of the Google Map page
-	//@FindBy(xpath = "//div[@class='gb_fa']/a[text()='Sign in']")
-	@FindBy(id = "gb_70")
-	public WebElement button_SignIn;
 	
 	@FindBy(xpath = "//*[@id=\'pane\']/div/div[1]/div/div/div[9]/div[1]/button/div[1]/div[2]/div[1]")
 	public WebElement restaurantAddress;
@@ -59,16 +40,6 @@ public class GoogleMapPage extends Page {
 				.loadPropertiesResources("/testdata_google.properties");
 		String URL = PROPERTIES_RESOURCES.getProperty("google.map.url");
 		TestCaseBase.threadDriver.get().navigate().to(URL);
-		// The language for google homepage
-//		if ( FunctionUtil.isExist(english) ) {
-//			if (TestCaseBase.browserFlag.equals("ie")) {
-//				english.sendKeys("\n");
-//				english.click();
-//			}
-//			else{
-//			english.click();
-//			}
-//		}
 		//return this means browser stays on GoogleHomePage
 		return this;
 	}
@@ -76,9 +47,6 @@ public class GoogleMapPage extends Page {
 	public GoogleMapPage search(String searchTerm) throws Exception {
 		
 		searchInput.sendKeys(searchTerm + Keys.ENTER);
-//		searchMapButton.click();
-		//searchInput.submit();
-		//searchInput.sendKeys(Keys.SPACE);
 		return this;
 	}
 	
@@ -91,32 +59,9 @@ public class GoogleMapPage extends Page {
 		searchInput.clear();
 		searchInput.sendKeys("Restaurants nearby" + Keys.ENTER);
 		
-//		Waiting.until(searchMapButton);
-//		searchMapButton.click();
-		
 		Waiting.until(firstRestaurant);
 		
-		return firstRestaurant; // .//*[@class='widget-pane-section-listbox widget-pane-section-scrollbox scrollable-y scrollable-show']/*[@class="widget-pane-section-result"][1]//*[@class="widget-pane-section-result-title"]/span
-	}
-
-	public GoogleMapPage directionsToRestaurant(String from, WebElement restaurant) throws InterruptedException {
-		Waiting.until(restaurant);
-		restaurant.click();
-		
-		Waiting.until(directionsButton);
-		Thread.sleep(1500);
-		
-		Actions actions = new Actions(TestCaseBase.threadDriver.get());
-		actions.moveToElement(directionsButton).click().perform();
-		
-		Waiting.until(fromDirectionsInput);
-		fromDirectionsInput.sendKeys(from);
-		Waiting.until(routeButton);
-		routeButton.click();
-		
-		Waiting.until(suggestedRoute);
-		
-		return this;
+		return firstRestaurant; 
 	}
 	
 	public GoogleMapPage waitPageLoad() throws InterruptedException {
