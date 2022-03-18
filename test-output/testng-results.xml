@@ -2,7 +2,7 @@
 <testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35879" started-at="2022-03-17T12:36:03 CDT" finished-at="2022-03-17T12:36:39 CDT">
+  <suite name="Default suite" duration-ms="35175" started-at="2022-03-17T21:05:04 CDT" finished-at="2022-03-17T21:05:39 CDT">
     <groups>
       <group name="ChromeWin32">
         <method signature="TC_01_GoogleWebSearch.testSearchWeb()[pri:0, instance:google.testcase.search.TC_01_GoogleWebSearch@589b3632]" name="testSearchWeb" class="google.testcase.search.TC_01_GoogleWebSearch"/>
@@ -10,9 +10,9 @@
         <method signature="TC_03_GoogleTranslate.testTranslate()[pri:0, instance:google.testcase.translate.TC_03_GoogleTranslate@4206a205]" name="testTranslate" class="google.testcase.translate.TC_03_GoogleTranslate"/>
       </group> <!-- ChromeWin32 -->
     </groups>
-    <test name="Default test" duration-ms="35879" started-at="2022-03-17T12:36:03 CDT" finished-at="2022-03-17T12:36:39 CDT">
+    <test name="Default test" duration-ms="35175" started-at="2022-03-17T21:05:04 CDT" finished-at="2022-03-17T21:05:39 CDT">
       <class name="google.testcase.search.TC_01_GoogleWebSearch">
-        <test-method status="PASS" signature="setUpBrowser(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:google.testcase.search.TC_01_GoogleWebSearch@589b3632]" name="setUpBrowser" is-config="true" duration-ms="1171" started-at="2022-03-17T12:36:30 CDT" finished-at="2022-03-17T12:36:32 CDT">
+        <test-method status="PASS" signature="setUpBrowser(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:google.testcase.search.TC_01_GoogleWebSearch@589b3632]" name="setUpBrowser" is-config="true" duration-ms="1200" started-at="2022-03-17T21:05:30 CDT" finished-at="2022-03-17T21:05:31 CDT">
           <params>
             <param index="0">
               <value>
@@ -38,17 +38,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="testSearchWeb()[pri:0, instance:google.testcase.search.TC_01_GoogleWebSearch@589b3632]" name="testSearchWeb" duration-ms="5358" started-at="2022-03-17T12:36:32 CDT" finished-at="2022-03-17T12:36:37 CDT">
+        <test-method status="PASS" signature="testSearchWeb()[pri:0, instance:google.testcase.search.TC_01_GoogleWebSearch@589b3632]" name="testSearchWeb" duration-ms="5642" started-at="2022-03-17T21:05:31 CDT" finished-at="2022-03-17T21:05:37 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchWeb -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:google.testcase.search.TC_01_GoogleWebSearch@589b3632]" name="tearDown" is-config="true" duration-ms="2085" started-at="2022-03-17T12:36:37 CDT" finished-at="2022-03-17T12:36:39 CDT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:google.testcase.search.TC_01_GoogleWebSearch@589b3632]" name="tearDown" is-config="true" duration-ms="2092" started-at="2022-03-17T21:05:37 CDT" finished-at="2022-03-17T21:05:39 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- google.testcase.search.TC_01_GoogleWebSearch -->
       <class name="google.testcase.translate.TC_03_GoogleTranslate">
-        <test-method status="PASS" signature="setUpBrowser(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:google.testcase.translate.TC_03_GoogleTranslate@4206a205]" name="setUpBrowser" is-config="true" duration-ms="1617" started-at="2022-03-17T12:36:03 CDT" finished-at="2022-03-17T12:36:05 CDT">
+        <test-method status="PASS" signature="setUpBrowser(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:google.testcase.translate.TC_03_GoogleTranslate@4206a205]" name="setUpBrowser" is-config="true" duration-ms="1621" started-at="2022-03-17T21:05:04 CDT" finished-at="2022-03-17T21:05:05 CDT">
           <params>
             <param index="0">
               <value>
@@ -74,17 +74,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="testTranslate()[pri:0, instance:google.testcase.translate.TC_03_GoogleTranslate@4206a205]" name="testTranslate" duration-ms="1401" started-at="2022-03-17T12:36:05 CDT" finished-at="2022-03-17T12:36:06 CDT">
+        <test-method status="PASS" signature="testTranslate()[pri:0, instance:google.testcase.translate.TC_03_GoogleTranslate@4206a205]" name="testTranslate" duration-ms="1462" started-at="2022-03-17T21:05:05 CDT" finished-at="2022-03-17T21:05:07 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTranslate -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:google.testcase.translate.TC_03_GoogleTranslate@4206a205]" name="tearDown" is-config="true" duration-ms="6186" started-at="2022-03-17T12:36:06 CDT" finished-at="2022-03-17T12:36:12 CDT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:google.testcase.translate.TC_03_GoogleTranslate@4206a205]" name="tearDown" is-config="true" duration-ms="6193" started-at="2022-03-17T21:05:07 CDT" finished-at="2022-03-17T21:05:13 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- google.testcase.translate.TC_03_GoogleTranslate -->
       <class name="google.testcase.search.TC_02_GoogleMapSearch">
-        <test-method status="PASS" signature="setUpBrowser(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:google.testcase.search.TC_02_GoogleMapSearch@568bf312]" name="setUpBrowser" is-config="true" duration-ms="1209" started-at="2022-03-17T12:36:12 CDT" finished-at="2022-03-17T12:36:14 CDT">
+        <test-method status="PASS" signature="setUpBrowser(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:google.testcase.search.TC_02_GoogleMapSearch@568bf312]" name="setUpBrowser" is-config="true" duration-ms="1200" started-at="2022-03-17T21:05:13 CDT" finished-at="2022-03-17T21:05:14 CDT">
           <params>
             <param index="0">
               <value>
@@ -110,11 +110,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBrowser -->
-        <test-method status="PASS" signature="testSearchMap()[pri:0, instance:google.testcase.search.TC_02_GoogleMapSearch@568bf312]" name="testSearchMap" duration-ms="10658" started-at="2022-03-17T12:36:14 CDT" finished-at="2022-03-17T12:36:24 CDT">
+        <test-method status="PASS" signature="testSearchMap()[pri:0, instance:google.testcase.search.TC_02_GoogleMapSearch@568bf312]" name="testSearchMap" duration-ms="9543" started-at="2022-03-17T21:05:14 CDT" finished-at="2022-03-17T21:05:24 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSearchMap -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:google.testcase.search.TC_02_GoogleMapSearch@568bf312]" name="tearDown" is-config="true" duration-ms="6171" started-at="2022-03-17T12:36:24 CDT" finished-at="2022-03-17T12:36:30 CDT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:google.testcase.search.TC_02_GoogleMapSearch@568bf312]" name="tearDown" is-config="true" duration-ms="6194" started-at="2022-03-17T21:05:24 CDT" finished-at="2022-03-17T21:05:30 CDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

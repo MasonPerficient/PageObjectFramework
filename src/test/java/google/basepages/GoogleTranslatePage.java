@@ -18,6 +18,9 @@ public class GoogleTranslatePage extends Page {
 	
 	@FindBy(xpath = "//span[@jsname='W297wb']")
 	public WebElement result;
+
+	@FindBy(id = "i12")
+	public WebElement translate;
 	
 	public GoogleTranslatePage open() throws Exception {
 			Properties PROPERTIES_RESOURCES = SystemUtil
@@ -29,6 +32,14 @@ public class GoogleTranslatePage extends Page {
 
 	public GoogleTranslatePage waitPageLoad() throws InterruptedException {
 		Waiting.until(input);
+		return this;
+	}
+
+	public GoogleTranslatePage translateInput(String input2) {
+		input.click();
+		input.sendKeys(input2);
+
+		translate.click();
 		return this;
 	}
 

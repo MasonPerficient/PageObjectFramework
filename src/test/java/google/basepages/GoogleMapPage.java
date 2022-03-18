@@ -5,7 +5,6 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
 import util.Page;
@@ -17,7 +16,7 @@ public class GoogleMapPage extends Page {
 
 	public static String TITLE = "Google Maps";
 	
-	@FindBy(xpath = "//*[@id=\'pane\']/div/div[1]/div/div/div[2]/div[1]/div[3]/div/a")
+	@FindBy(xpath = "//*[@id='pane']/div/div[1]/div/div/div[2]/div[1]/div[3]/div/a")
 	public WebElement firstRestaurant;
 
 	@FindBy(xpath = "(//div[@class='suggest-left-content']/span)[1]/span")
@@ -29,7 +28,7 @@ public class GoogleMapPage extends Page {
 	@FindBy(name = "q")
 	public WebElement searchInput;
 	
-	@FindBy(xpath = "//*[@id=\'pane\']/div/div[1]/div/div/div[9]/div[1]/button/div[1]/div[2]/div[1]")
+	@FindBy(xpath = "(//div[contains(text(), 'Lafayette')])[1]")
 	public WebElement restaurantAddress;
 	
 	
@@ -66,7 +65,7 @@ public class GoogleMapPage extends Page {
 	
 	public GoogleMapPage waitPageLoad() throws InterruptedException {
 		Thread.sleep(3000);
-		Waiting.until(button_SignIn);
+		Waiting.until(searchInput);
 		
 		return this;
 	}

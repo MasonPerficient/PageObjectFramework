@@ -6,7 +6,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
-import util.FunctionUtil;
 import util.Page;
 import util.SystemUtil;
 import util.TestCaseBase;
@@ -87,24 +86,7 @@ public class GoogleHomePage extends Page {
 		action.moveToElement(moreLink).clickAndHold().release().perform();
 		Waiting.until(googleTranslateLink);
 		action.moveToElement(googleTranslateLink).click().perform();
-		
-
- 
-	}
-
-	//this is for assertion. checking if user is signed in
-	public boolean isUserSignedIn() {
-		String browserFlag = TestCaseBase.browserFlag;
-		boolean result;
-		if (browserFlag.equals("chrome")) {
-			result=FunctionUtil.isExist(signedInUserChrome);
-			log.info("actual Signed In="+result);
-		} else {
-			result=FunctionUtil.isExist(signedInUser);
-			log.info("actual Signed In="+result);
 		}
-		return result;
-	}
 	
 	//use this method to wait until the page loads. 
 	//usually it is not the page loads but a specific element loads
