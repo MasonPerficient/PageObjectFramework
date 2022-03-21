@@ -12,7 +12,7 @@ public class TC_02_GoogleMapSearch extends TestCaseBase {
 	public void testSearchMap() throws Exception {
 		String mapSearchResultPerficient = TestData.get("result.perficient");
 		String mapSearchInput = TestData.get("input");
-		String restaurantZip = TestData.get("result.zipcode");
+		String restaurantCity = TestData.get("result.city");
 		
 		
 		GoogleMapPage googleMapPage = new GoogleMapPage();
@@ -26,7 +26,7 @@ public class TC_02_GoogleMapSearch extends TestCaseBase {
 		
 		WebElement restaurant = googleMapPage.findRestaurant();
 		restaurant.click();
-		Thread.sleep(1500);
-		assert (googleMapPage.restaurantAddressContains(restaurantZip));
+		Thread.sleep(1000);
+		assert (googleMapPage.restaurantAddressContains(restaurantCity));
 	}
 }

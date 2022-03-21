@@ -28,7 +28,7 @@ public class GoogleMapPage extends Page {
 	@FindBy(name = "q")
 	public WebElement searchInput;
 	
-	@FindBy(xpath = "(//div[contains(text(), 'Lafayette')])[1]")
+	@FindBy(xpath = "(//div[@class='QSFF4-text gm2-body-2'])[1]")
 	public WebElement restaurantAddress;
 	
 	
@@ -78,7 +78,7 @@ public class GoogleMapPage extends Page {
 	}
 	
 	public boolean restaurantAddressContains(String mapSearchResultZipcode) throws Exception {
-		log.info("expected zipcode="+mapSearchResultZipcode);
+		log.info("expected address city="+mapSearchResultZipcode);
 		log.info("actual address="+restaurantAddress.getText());
 		return restaurantAddress.getText().contains(mapSearchResultZipcode);
 	}
