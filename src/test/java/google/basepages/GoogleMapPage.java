@@ -16,7 +16,7 @@ public class GoogleMapPage extends Page {
 
 	public static String TITLE = "Google Maps";
 	
-	@FindBy(xpath = "//*[@id='pane']/div/div[1]/div/div/div[2]/div[1]/div[3]/div/a")
+	@FindBy(xpath = "(//div[@class='V0h1Ob-haAclf OPZbO-KE6vqe o0s21d-HiaYvf'])[1]")
 	public WebElement firstRestaurant;
 
 	@FindBy(xpath = "(//div[@class='suggest-left-content']/span)[1]/span")
